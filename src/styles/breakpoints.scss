@@ -1,0 +1,93 @@
+$xsBreakpoint: 360px;
+$smBreakpoint: 600px;
+$mdBreakpoint: 1024px;
+$lgBreakpoint: 1440px;
+$xlBreakpoint: 1920px;
+
+// min/max breakpoint variables
+
+$defaultPixel: 1;
+$screen-xs-min: $xsBreakpoint;
+$screen-sm-min: $smBreakpoint;
+$screen-md-min: $mdBreakpoint;
+$screen-lg-min: $lgBreakpoint;
+$screen-xl-min: $xlBreakpoint;
+
+$screen-xs-max: $screen-sm-min - $defaultPixel;
+$screen-sm-max: $screen-md-min - $defaultPixel;
+$screen-md-max: $screen-lg-min - $defaultPixel;
+$screen-lg-max: $screen-xl-min - $defaultPixel;
+
+@mixin xs-screen() {
+  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin sm-screen() {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin md-screen() {
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    @content;
+  }
+}
+
+@mixin lg-screen() {
+  @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    @content;
+  }
+}
+
+@mixin lx-screen() {
+  @media (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+
+//grouped breakpoints
+@mixin mobile-screen() {
+  @include xs-screen() {
+    @content;
+  }
+}
+
+@mixin tablet-screen() {
+  @include sm-screen() {
+    @content;
+  }
+}
+
+@mixin desktop-screen() {
+  @media (min-width: $screen-md-min) {
+    @content;
+  }
+}
+
+//maxed breakpoints
+@mixin xs-screen-max() {
+  @media (max-width: $screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin sm-screen-max() {
+  @media (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin md-screen-max() {
+  @media (max-width: $screen-md-max) {
+    @content;
+  }
+}
+
+@mixin lg-screen-max() {
+  @media (max-width: $screen-lg-max) {
+    @content;
+  }
+}

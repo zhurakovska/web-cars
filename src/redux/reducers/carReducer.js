@@ -29,7 +29,7 @@ export const { fetchCarsStart, fetchCarsSuccess, fetchCarsFailure } = carSlice.a
 export const fetchCars = () => async(dispatch) => {
 	dispatch(fetchCarsStart());
 	try {
-		const response = await axios.get("https://66ee80d33ed5bb4d0bf11b33.mockapi.io/api/cars")
+		const response = await axios.get("https://66ee80d33ed5bb4d0bf11b33.mockapi.io/api/cars/advert")
 		dispatch(fetchCarsSuccess(response.data));
 	} catch (error){
 		dispatch(fetchCarsFailure(error.message))

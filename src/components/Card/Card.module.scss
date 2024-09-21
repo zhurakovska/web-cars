@@ -1,0 +1,23 @@
+@import "../../styles/breakpoints.scss";
+
+.card {
+  width: calc((100% - 90px) / 3);
+}
+
+.image {
+  width: 100%;
+}
+
+@include tablet-screen() {
+  .card {
+    width: calc((100% - 60px) / 2);
+  }
+}
+
+@include mobile-screen() {
+  .card {
+    width: 100%;
+  }
+}
+
+
