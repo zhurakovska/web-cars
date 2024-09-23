@@ -1,0 +1,22 @@
+@import "../../styles/breakpoints.scss";
+@import '../../styles/variables.scss';
+
+.button {
+  background-color: $light-blue;
+  color: $text-color;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+@include tablet-screen() {
+}
+
+@include mobile-screen() {
+  .card {
+    width: 100%;
+  }
+}
+
+

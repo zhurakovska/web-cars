@@ -1,16 +1,56 @@
 @import "../../styles/breakpoints.scss";
+@import "../../styles/variables.scss";
 
 .card {
-  width: calc((100% - 90px) / 3);
+  width: calc((100% - 90px) / 4);
 }
 
 .image {
   width: 100%;
+  height: 268px;
+  border-radius: 14px;
+  object-fit: cover;
 }
+
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.model {
+  color: $light-blue;
+}
+
+.info {
+  margin-top: 8px;
+  color: $grey-color;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 28px;
+  border-radius: 12px;
+}
+
+
+@include md-screen() {
+  .card {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
 
 @include tablet-screen() {
   .card {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
 }
 

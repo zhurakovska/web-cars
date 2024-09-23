@@ -14,15 +14,11 @@ import Card from "../../components/Card/Card.jsx";
 	if (loading) return <div>Loading...</div>;
 	if (error) return <div>Error: {error}</div>;
 
-	console.log(carsList, "carsList")
-
 	return (
 		<div className={styles.list}>
-
-				{carsList.map((car) => (
+			{carsList.map((car) => (
 				<Card {...car} key={car.id}/>
-				))}
-
+			))}
 		</div>
 	);
 };
